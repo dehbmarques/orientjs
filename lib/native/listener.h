@@ -39,8 +39,9 @@ public:
 	std::list<v8::Local<v8::Object> > stack;
 	v8::Local<v8::Function > ridFactory;
 	v8::Local<v8::Function > bagFactory;
+	v8::Isolate *isolate;
 	bool useRidBag;
-	TrackerListener(v8::Local<v8::Function> ridFactory, v8::Local<v8::Function > bagFactory,bool useRidBag ) ;
+	TrackerListener(v8::Local<v8::Function> ridFactory, v8::Local<v8::Function > bagFactory,v8::Isolate * isolate,bool useRidBag ) ;
 	~TrackerListener() ;
 
 };
